@@ -1,0 +1,91 @@
+.home{
+    background-color: #333;
+    min-height: 100vh;
+    color: white;
+}
+.heading{
+    font-weight: 500;
+    padding: 20px;
+    text-align: center;
+    color: orange;
+}
+.form{
+    margin: 10px auto;
+    padding: 20px;
+    width: 50%;
+    background-color: #222;
+    border-radius: 10px;
+}
+.form div{
+    display: flex;
+    padding: 5px 0;
+}
+
+.form label{
+    font-size: 17px;
+    color: orange;
+    width: 30%;
+    font-weight: 600;
+}
+.form input{
+    font-size: 17px;
+    padding: 5px 10px;
+    border: none;
+    outline: none;
+    width: 70%;
+    border-radius: 5px;
+}
+.form button{
+    width: 100%;
+    padding: 5px;
+    border-radius: 20px;
+    font-size: 17px;
+    cursor: pointer;
+    border: none;
+}
+.form button:hover{
+    color: white;
+    background-color: rgb(250, 166, 11);
+}
+.card{
+    width: 400px;
+    padding: 20px;
+    margin: 20px;
+    display: inline-block;
+    background-color: #222;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 17px;
+}
+.card h3{
+    font-weight: 500;
+}
+.card p{
+    padding: 5px 0;
+    opacity: 0.7;
+}
+.card button{
+    margin: 20px 10px 5px;
+    width: 80px;
+    padding: 6px 8px;
+    font-size: 17px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: orange;
+}
+@media screen and (max-width: 992px) {
+    .form{
+        width: 60%;
+    }
+}
+@media screen and (max-width: 772px) {
+    .form{
+        width: 80%;
+    }
+}
+@media screen and (max-width: 600px) {
+    .form{
+        width: 90%;
+    }
+}
