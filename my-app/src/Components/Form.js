@@ -1,9 +1,16 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import style from './home.module.css';
 
-const Form = ({onAddUser, btnText}) => {
+const Form = ({selectedUser, handleSubmitData, btnText}) => {
     const [users, setUsers] = useState({username: '', email: ''});
     const { username, email } = users;
+
+    useEffect(() => {
+        setUsers({
+            username: selectedUser.username,
+            email: selectedUser.email
+        })
+    },[selectedUser])
 
     const handleChange = (event) => {
         setUsers((oldUsers) => {
@@ -13,7 +20,7 @@ const Form = ({onAddUser, btnText}) => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        onAddUser(users);
+        handleSubmitData(users);
         setUsers({username: '', email: ''});
     }
 
@@ -34,6 +41,13 @@ const Form = ({onAddUser, btnText}) => {
             </form>
         </div>
     )
+}
+
+Form.defaultProps = {
+    selectedUser: {
+      username: "",
+      email: "",
+    }
 }
 
 export default Form;
